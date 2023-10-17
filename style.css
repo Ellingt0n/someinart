@@ -343,6 +343,9 @@ main {
 .left-sidebar ul li {
   margin-bottom: 30px;
 }
+.catalog--active a:hover {
+  background: none !important;
+}
 .left-sidebar ul li:nth-child(1) {
   margin-bottom: 20px;
 }
