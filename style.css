@@ -2239,7 +2239,7 @@ main {
   opacity: 0.7;
 }
 .filter-popup .data .sizes .checkbox:checked + label {
-  box-shadow: 0 0 0 1px #fb0;
+  box-shadow: 0 0 0 3px #fb0;
 }
 .filter-popup .data .color {
   padding-bottom: 20px;
@@ -3399,9 +3399,6 @@ body.dark .index-categories-block .list .item:after {
 body.dark .index-categories-block .list .item a {
   color: #fff;
 }
-body.dark .faq-block {
-  background: var(--Darkblue2, #0d1622);
-}
 body.dark .faq-block form .select .radio + label {
   background: url('img/radiow.svg') no-repeat 0 0;
 }
@@ -3658,7 +3655,11 @@ body.dark .header .links .catalog ul li a {
   .faq-block .text {
     width: 100%;
     margin-bottom: 50px;
-    padding: 10px;
+    padding: 20px;
+    border-radius: 30px;
+  }
+  .dark .faq-block .text {
+    background-color: #0d1622;
   }
   .faq-block form {
     width: 100%;
