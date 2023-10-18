@@ -973,6 +973,10 @@ main {
   margin-bottom: 30px;
   padding: 50px;
 }
+
+.dark .faq-block {
+  background-color: #0d1622;
+}
 .faq-block .text {
   width: 48%;
 }
