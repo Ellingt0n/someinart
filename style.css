@@ -1788,13 +1788,6 @@ main {
 .basket-page .right-col .item .name.active:after {
   content: '-';
 }
-.basket-page .right-col .item .name:after {
-  content: '+';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -14px;
-}
 .basket-page .right-col .item .text {
   margin-top: 20px;
   display: none;
@@ -2447,33 +2440,44 @@ main {
   color: #000;
   background: none;
 }
-.item-page .info .item {
-  background: #fff;
+.text-expands {
+  background: #ffffff;
   margin-bottom: 20px;
   border-radius: 30px;
   padding: 20px;
 }
-.item-page .info .item .name {
+.text-expands--dark{
+  background-color: #0d1622;
+}
+.text-expands .name {
   font-size: 16px;
   font-family: 'Madera Bold';
   position: relative;
   cursor: pointer;
   padding-right: 30px;
 }
-.item-page .info .item .name.active:after {
+
+.text-expands.active .name:after {
   content: '-';
 }
-.item-page .info .item .name:after {
+
+.text-expands .name:after {
   content: '+';
   position: absolute;
   right: 0;
   top: 50%;
   margin-top: -14px;
 }
-.item-page .info .item .txt {
+
+.text-expands .txt {
   margin-top: 20px;
   display: none;
 }
+
+.text-expands.active .txt{
+  display: block;
+}
+
 .catalog-page2 {
   padding-bottom: 1px;
 }
@@ -3008,13 +3012,17 @@ main {
 }
 .account-page .right-side ul li a {
   display: inline-block;
-  font-family: 'Madera',sans-serif;
+  font-family: 'Madera', sans-serif;
   text-decoration: none;
   font-size: 19px;
   line-height: 14px;
   padding: 20px;
   border-radius: 60px;
   background-color: #ccd2da;
+}
+
+.account-page .right-side ul li a:hover {
+  background-color: #ffffff;
 }
 .account-page .right-side ul li a.active {
   font-family: 'Madera Bold';
@@ -3140,6 +3148,10 @@ body.dark .account-page .content .account .button button:hover {
 body.dark .account-page .right-side ul li a {
   background: #0d1622;
   color: #fff;
+}
+body.dark .account-page .right-side ul li a:hover {
+  background: #ffffff;
+  color: #000000;
 }
 body.dark .account-page .right-side ul li a.active {
   background: #fff;
@@ -3269,7 +3281,6 @@ body.dark .delivery-page form button:hover {
 body.dark .delivery-page form button::before {
   content: none;
 }
-
 
 body.dark .delivery-page .right-col .item .price {
   margin-bottom: 5px;
