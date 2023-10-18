@@ -435,7 +435,7 @@ main {
   color: #000 !important;
 }
 .page-content {
-  padding: 18px 18px 1px 109px;
+  padding: 18px 18px 18px 109px;
 }
 .top-page-form {
   margin-bottom: 20px;
@@ -879,25 +879,9 @@ main {
   position: relative;
   overflow: hidden;
 }
-.index-advantages-block .list .item.color1:after {
-  background: linear-gradient(0deg, rgba(70, 0, 0, 0.7) 0%, rgba(70, 0, 0, 0.7) 100%);
-}
-.index-advantages-block .list .item.color2:after {
-  background: linear-gradient(0deg, rgba(71, 0, 19, 0.7) 0%, rgba(71, 0, 19, 0.7) 100%);
-}
-.index-advantages-block .list .item.color3:after {
-  background: linear-gradient(0deg, rgba(0, 33, 85, 0.7) 0%, rgba(0, 33, 85, 0.7) 100%);
-}
-.index-advantages-block .list .item.color4:after {
-  background: linear-gradient(0deg, rgba(67, 49, 0, 0.7) 0%, rgba(67, 49, 0, 0.7) 100%);
-}
-.index-advantages-block .list .item:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.index-advantages-block .list .item {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .index-advantages-block .list .item .text {
   position: absolute;
@@ -928,26 +912,7 @@ main {
   border-radius: 30px;
   position: relative;
   overflow: hidden;
-}
-.index-advantages-block .slider .item.color1:after {
-  background: linear-gradient(0deg, rgba(70, 0, 0, 0.7) 0%, rgba(70, 0, 0, 0.7) 100%);
-}
-.index-advantages-block .slider .item.color2:after {
-  background: linear-gradient(0deg, rgba(71, 0, 19, 0.7) 0%, rgba(71, 0, 19, 0.7) 100%);
-}
-.index-advantages-block .slider .item.color3:after {
-  background: linear-gradient(0deg, rgba(0, 33, 85, 0.7) 0%, rgba(0, 33, 85, 0.7) 100%);
-}
-.index-advantages-block .slider .item.color4:after {
-  background: linear-gradient(0deg, rgba(67, 49, 0, 0.7) 0%, rgba(67, 49, 0, 0.7) 100%);
-}
-.index-advantages-block .slider .item:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  background-repeat: no-repeat;
 }
 .index-advantages-block .slider .item .text {
   position: absolute;
@@ -1177,6 +1142,11 @@ main {
   background: #fff;
   color: #000;
 }
+
+.dark .bottom-page-blocks .item a:hover {
+  background: #000000;
+  color: #ffffff;
+}
 .footer {
   text-align: center;
   padding: 30px 18px 30px 109px;
@@ -1230,10 +1200,6 @@ main {
   background: url('img/flag.svg') no-repeat right;
   font-size: 16px;
   font-family: 'Madera Bold';
-  text-decoration: none;
-}
-.bottom-menu .lang:hover {
-  opacity: 0.6;
 }
 .header {
   background: #fff;
@@ -1420,6 +1386,13 @@ main {
   background-position-x: center;
   background-size: cover;
 }
+
+@media (max-width: 768px) {
+  .fav-image {
+    display: none;
+  }
+}
+
 .catalog-page .item {
   width: 24%;
   margin-bottom: 20px;
@@ -1465,10 +1438,11 @@ main {
   font-size: 24px;
 }
 .catalog-page .item .text a {
+  position: relative;
   display: inline-block;
   text-decoration: none;
   color: #fff;
-  background: var(--Darkblue1, #060a0f);
+  background-color: var(--Darkblue1, #060a0f);
   height: 50px;
   line-height: 42px;
   padding: 0 20px;
@@ -1481,21 +1455,10 @@ main {
   font-family: 'Madera Bold';
 }
 .catalog-page .item .text a.other {
-  background: none;
-  color: #000;
   padding: 0 20px 0 50px;
-  background: url('img/cart3.svg') no-repeat 15px 50%;
 }
-.catalog-page .item .text a.other:hover {
-  background: url('img/cart3.svg') no-repeat 15px 50%;
-}
-
-/* .catalog-page .item .text a.other::before {
-  background: url('img/cart3.svg') no-repeat;
-} */
-
 .catalog-page .item .text a:hover {
-  background: none;
+  background-color: #ffffff;
   color: #000;
 }
 .article-page {
@@ -1561,9 +1524,13 @@ main {
   margin: 0 0 27px 0;
   padding: 70px 40px;
   position: relative;
-  color: #d4e4f9;
+  color: #4b607b;
   border-radius: 20px;
   background: var(--Grey, #f0f4f6);
+}
+
+.dark .article-page .text blockquote {
+  color: #d4e4f9;
 }
 .article-page .text blockquote:before {
   content: '';
@@ -2450,7 +2417,7 @@ main {
   border-radius: 30px;
   padding: 20px;
 }
-.text-expands--dark{
+.text-expands--dark {
   background-color: #0d1622;
 }
 .text-expands .name {
@@ -2474,12 +2441,15 @@ main {
 }
 
 .text-expands .txt {
+  transition: all 2s;
   margin-top: 20px;
-  display: none;
+  position: fixed;
+  transform: scale(0);
 }
 
-.text-expands.active .txt{
-  display: block;
+.text-expands.active .txt {
+  position: unset;
+  transform: none;
 }
 
 .catalog-page2 {
@@ -3330,8 +3300,8 @@ body.dark .catalog-page .item {
   background: #0d1622;
 }
 body.dark .catalog-page .item .text a {
-  background: #000;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
 }
 body.dark .catalog-page .item .text a.other {
   position: relative;
@@ -3346,19 +3316,59 @@ body.dark .catalog-page .item .text a.other {
   left: 14px;
   width: 30px;
   height: 30px;
-  background-image: url('img/cart3w.svg');
+  -webkit-mask-image:url('img/cart3w.svg');
+  -moz-mask-image:url('img/cart3w.svg');
+  mask-image: url('img/cart3w.svg');
+  background-color: #ffffff;
 }
 
-.other:hover::before {
-  background-image: url('img/cart2.svg');
+.chffon-link {
+  display: block;
+  position: relative;
+  padding: 40px 0;
+  font-family: 'Madera Bold',sans-serif;
+  font-size: 24px;
+  color: #060A0F;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.chffon-link--dark {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .chffon-link {
+    padding: 20px 0;
+  }
+}
+
+.other:hover::before{
+  background-color: #000000;
+}
+
+.dark .other::before {
+  background-color: #000000;
+}
+
+.dark .other:hover::before {
+  background-color: #ffffff;
 }
 
 body.dark .catalog-page .item .text a.other:hover {
-  background-color: #ffffff;
+  background-color: #000000;
+  color: #ffffff;
 }
+
+body.dark .catalog-page .item .text a.other{
+  background-color: #ffffff;
+  color: #000000;
+}
+
 body.dark .catalog-page .item .text a:hover {
-  color: #000;
-  background-color: #fff;
+  color: #ffffff;
+  background-color: #000000;
 }
 body.dark .article-page .text .navi a {
   color: #fff;
@@ -3832,9 +3842,16 @@ body.dark .header .links .catalog ul li a {
   width: 100%;
 }
 
+.slider-img-2 {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: 50% 15%;
+}
+
 @media (max-width: 768px) {
   .slider-img-2 {
-    object-position: 29% 50%;
+    object-position: 71% 31%;
   }
 }
 @media (max-width: 700px) {
@@ -4966,3 +4983,4 @@ body.dark .header .links .catalog ul li a {
 .catalog--active {
   display: block !important;
 }
+
