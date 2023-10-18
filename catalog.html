@@ -8,22 +8,7 @@
     <link rel="stylesheet" href="slick.css" />
     <link rel="stylesheet" href="jquery.fancybox.min.css" />
     <link rel="stylesheet" href="jquery-ui.css" />
-    <script>
-      $(function () {
-        $('#slider-range').slider({
-          range: true,
-          min: 0,
-          max: 75000,
-          values: [5000, 50000],
-          slide: function (event, ui) {
-            $('#amount').val(ui.values[0]);
-            $('#amount2').val(ui.values[1]);
-          },
-        });
-        $('#amount').val($('#slider-range').slider('values', 0));
-        $('#amount2').val($('#slider-range').slider('values', 1));
-      });
-    </script>
+   
   </head>
   <body>
     <header class="header flex">
@@ -520,5 +505,21 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $('#slider-range').slider({
+          range: true,
+          min: 0,
+          max: 75000,
+          values: [5000, 50000],
+          slide: function (event, ui) {
+            $('#amount').val(ui.values[0]);
+            $('#amount2').val(ui.values[1]);
+          },
+        });
+        $('#amount').val($('#slider-range').slider('values', 0));
+        $('#amount2').val($('#slider-range').slider('values', 1));
+      });
+    </script>
   </body>
 </html>
