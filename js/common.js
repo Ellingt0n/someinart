@@ -147,9 +147,10 @@ $(function () {
     ],
   });
   $('.account-page .content .orders .item .list').slick({
+    slidesToShow: 1,
     variableWidth: true,
     arrows: false,
-    infinity: false,
+    infinite: false,
   });
   if ($(window).width() < 576) {
     $('.catalog-page .sl').slick({
