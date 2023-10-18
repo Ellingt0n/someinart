@@ -34,43 +34,27 @@ function showCatalogListTabletMobile() {
 showCatalogListTabletMobile();
 //
 
-// // Показать раскрывающиеся списки
-// function showHideText() {
-//   const blockHideTexts = document.querySelectorAll('.text-expands');
-
-//   document.addEventListener('click', function (evt) {
-
-//     blockHideTexts.forEach((hideText) => {
-//       if (!hideText.classList.contains('active')) {
-
-//         if (evt.target === hideText || evt.target.parentNode === hideText) {
-//           blockHideTexts.forEach((item) => {
-//             item.classList.remove('active');
-//           });
-//           hideText.classList.add('active');
-//         }
-//       } else hideText.classList.remove('active');
-//     });
-//   });
-// }
-// showHideText();
-// //
-
-// Инициализировать раскрывающиеся списки
-function initTextExpands() {
+// Показать раскрывающиеся списки
+function showHideText() {
   const blockHideTexts = document.querySelectorAll('.text-expands');
 
-  document.addEventListener('click', function ({ target }) {
+  document.addEventListener('click', function (evt) {
     blockHideTexts.forEach((hideText) => {
-      if ((target === hideText || target.parentNode === hideText) && !hideText.classList.contains('active')) {
-        hideText.classList.add('active');
+      if (!hideText.classList.contains('active')) {
+        if (evt.target === hideText || evt.target.parentNode === hideText) {
+          blockHideTexts.forEach((item) => {
+            item.classList.remove('active');
+          });
+          hideText.classList.add('active');
+        }
       } else {
         hideText.classList.remove('active');
-      } 
+      }
     });
   });
 }
-initTextExpands();
+showHideText();
+//
 
 $(function () {
   $('.minus').click(function () {
@@ -166,8 +150,6 @@ $(function () {
     variableWidth: true,
     arrows: false,
     infinity: false,
-    swipeToSlide: true,
-    slidesToShow: 1,
   });
   if ($(window).width() < 576) {
     $('.catalog-page .sl').slick({
