@@ -3832,8 +3832,8 @@ body.dark .header .links .catalog ul li a {
 }
 
 .slick-active:hover {
-  transition: all 1s;
   scale: 1.01;
+  transition: all 200ms ease;
 }
 
 .slider-img {
