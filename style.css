@@ -1442,7 +1442,7 @@ main {
   display: inline-block;
   text-decoration: none;
   color: #fff;
-  background-color: var(--Darkblue1, #060a0f);
+  background-color: #060a0f;
   height: 50px;
   line-height: 42px;
   padding: 0 20px;
@@ -3316,8 +3316,8 @@ body.dark .catalog-page .item .text a.other {
   left: 14px;
   width: 30px;
   height: 30px;
-  -webkit-mask-image:url('img/cart3w.svg');
-  -moz-mask-image:url('img/cart3w.svg');
+  -webkit-mask-image: url('img/cart3w.svg');
+  -moz-mask-image: url('img/cart3w.svg');
   mask-image: url('img/cart3w.svg');
   background-color: #ffffff;
 }
@@ -3326,9 +3326,9 @@ body.dark .catalog-page .item .text a.other {
   display: block;
   position: relative;
   padding: 40px 0;
-  font-family: 'Madera Bold',sans-serif;
+  font-family: 'Madera Bold', sans-serif;
   font-size: 24px;
-  color: #060A0F;
+  color: #060a0f;
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
@@ -3344,7 +3344,7 @@ body.dark .catalog-page .item .text a.other {
   }
 }
 
-.other:hover::before{
+.other:hover::before {
   background-color: #000000;
 }
 
@@ -3361,7 +3361,7 @@ body.dark .catalog-page .item .text a.other:hover {
   color: #ffffff;
 }
 
-body.dark .catalog-page .item .text a.other{
+body.dark .catalog-page .item .text a.other {
   background-color: #ffffff;
   color: #000000;
 }
