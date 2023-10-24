@@ -4287,9 +4287,6 @@ body.dark .header .links .catalog ul li a {
     display: block;
     text-align: center;
   }
-  .catalog-page .item .text a.other {
-    background: url('img/cart3.svg') no-repeat calc(50% - 60px) 50%;
-  }
   .article-page .top-image {
     margin-bottom: 20px;
   }
