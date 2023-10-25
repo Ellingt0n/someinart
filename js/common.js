@@ -1,5 +1,13 @@
-// Показать бургер на десктопе
+//Функция убрать меню бургер скроллом
+window.addEventListener('scroll', function() {
+  const menuList = document.querySelector('.catalog1');
+  if(menuList.classList.contains('catalog--active')) {
+    menuList.classList.remove('catalog--active');
+  }
+});
+//
 
+// Показать бургер на десктопе
 function showCatalogListDesktop() {
   const menuButton = document.querySelector('.menu-button-1');
   const catalog = document.querySelector('.catalog1');
@@ -74,7 +82,7 @@ $(function () {
   $('.index-advantages-block .top-block .checkbox + label').click(function () {
     $('body').toggleClass('dark');
   });
-  $('.index-page-slider').slick({});
+  $('.index-page-slider').slick({autoplay:true});
   $('.index-collections-block').slick({
     arrows: false,
     speed: 300,
