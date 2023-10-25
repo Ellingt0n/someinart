@@ -302,6 +302,7 @@ main {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .flex2 {
   display: -webkit-box;
@@ -2446,18 +2447,26 @@ main {
   margin-bottom: 20px;
   border-radius: 30px;
   padding: 20px;
-  height: 40px;
+  height: auto;
   transition: all 0.5s;
+  cursor: pointer;
 }
 .text-expands.active {
   background: #ffffff;
   margin-bottom: 20px;
   border-radius: 30px;
   padding: 20px;
-  height: 242px;
+  height: 100%;
+}
+
+.text-expands.active .name {
+  margin-bottom: 10px;
 }
 
 .text-expands--dark {
+  background-color: #0d1622;
+}
+.text-expands--dark.active {
   background-color: #0d1622;
 }
 .text-expands .name {
@@ -2477,22 +2486,21 @@ main {
   content: '+';
   position: absolute;
   right: 0;
-  top: 74%;
+  top: 37%;
   margin-top: -14px;
   font-size: 20px;
 }
 
 .text-expands .txt {
-  /* transition: all 0.5s;
+  transition: all 0.5s;
   visibility: hidden;
-  height: 0; */
+  height: 0;
   display: none;
 }
 
 .text-expands.active .txt {
-  /* visibility: visible;
+  visibility: visible;
   height: auto;
-  margin-top: 20px; */
   display: block;
 }
 
