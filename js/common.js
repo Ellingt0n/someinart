@@ -44,22 +44,27 @@ showCatalogListTabletMobile();
 
 // Показать раскрывающиеся списки
 function showHideText() {
-  const blockHideTexts = document.querySelectorAll('.text-expands');
-
-  document.addEventListener('click', function (evt) {
-    blockHideTexts.forEach((hideText) => {
-      if (!hideText.classList.contains('active')) {
-        if (evt.target === hideText || evt.target.parentNode === hideText) {
-          blockHideTexts.forEach((item) => {
-            item.classList.remove('active');
-          });
-          hideText.classList.add('active');
-        }
-      } else {
-        hideText.classList.remove('active');
-      }
-    });
+  $('.text-expands').click(function() {
+    $(this).siblings().find('.txt').slideUp(300);
+    $(this).find('.txt').slideToggle(300);
   });
+
+  // const blockHideTexts = document.querySelectorAll('.text-expands');
+
+  // document.addEventListener('click', function (evt) {
+  //   blockHideTexts.forEach((hideText) => {
+  //     if (!hideText.classList.contains('active')) {
+  //       if (evt.target === hideText || evt.target.parentNode === hideText) {
+  //         blockHideTexts.forEach((item) => {
+  //           item.classList.remove('active');
+  //         });
+  //         hideText.classList.add('active');
+  //       }
+  //     } else {
+  //       hideText.classList.remove('active');
+  //     }
+  //   });
+  // });
 }
 showHideText();
 //
