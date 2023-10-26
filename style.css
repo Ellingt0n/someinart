@@ -1401,6 +1401,7 @@ main {
   border-radius: 30px;
   background-position-x: center;
   background-size: cover;
+  align-self: normal;
 }
 
 @media (max-width: 768px) {
@@ -2405,7 +2406,7 @@ main {
   box-sizing: border-box;
 }
 .item-page .info .colors .checkbox:checked + label {
-  border: 2px solid var(--Yellow, #ffbb00);
+  border: 5px solid var(--Yellow, #ffbb00);
 }
 .item-page .info .text {
   padding-bottom: 20px;
